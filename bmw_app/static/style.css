@@ -136,20 +136,23 @@
 }
 .news-card {
     margin: 10px;
-    flex-basis: 20%;
+    flex-basis: 24%;
     background-color: #ffffff;
     box-shadow: 4px 4px 32px rgba(0,0,0,0.4);
-    padding: 25px;
+    padding: 20px;
     margin-bottom: 30px;
 }
 .news-img {
     text-align: center;
 }
 .news-img img {
-    width: 80%;
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
 }
 .news-title {
     font-size: 20px;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 .news-date {
