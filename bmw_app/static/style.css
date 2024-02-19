@@ -146,8 +146,8 @@
     text-align: center;
 }
 .news-img img {
-    width: 128px;
-    height: 128px;
+    width: 256px;
+    height: 256px;
     object-fit: cover;
 }
 .news-title {
