@@ -1,0 +1,32 @@
+{% extends './base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<main class="main">
+    <section class="home">
+        <div class="container">
+            <h1 class="home-title">Welcome to the BMW CLUB</h1>
+            <P class="home-description">Добро пожаловать в мир страсти, элегантности и инноваций - BMW CLUB! Мы являемся объединяющей силой для всех поклонников и владельцев BMW, предоставляя уникальное пространство для обмена опытом, общения и наслаждения всем, что связано с этим великолепным брендом. Наши ценности пропитаны любовью к BMW, и мы стремимся поддерживать и развивать эту страсть вместе с нашими членами. Независимо от того, являетесь ли вы долголетним владельцем или просто разделяете любовь к автомобилям, вступив в наш клуб, вы становитесь частью семьи, где ценятся история, инновации и внимание к деталям. Мы приглашаем вас присоединиться к нам в этом захватывающем путешествии. Вместе мы будем исследовать новые горизонты, наслаждаться уникальным опытом вождения и создавать воспоминания, которые будут с вами на протяжении всей жизни.</P>
+            <a href="#Lastnews" class="button-outline-light">Last News</a>
+        </div>
+    </section>
+    <section class="last-news" id="Lastnews">
+        <div class="container">
+            <h2 class="title-primary">Last news</h2>
+            <div class="news-row">
+                {% for post in posts %}
+                    <div class="news-card">
+                        <div class="news-img">
+                            <img src="{{post.image}}" alt="{{post.title}}">
+                        </div>
+                        <h3 class="news-title">{{post.title}}</h3>
+                        <h3 class="news-date">{{post.post_date|date:"d.m.y"}}</h3>
+                        <a href="{% url 'news_detail_page' pk=post.pk %}" class="button-primary">Read</a>
+                    </div>
+                    {% endfor %}
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
