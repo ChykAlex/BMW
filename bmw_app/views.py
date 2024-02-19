@@ -12,3 +12,6 @@ def news_page(request):
 def news_detail_page(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request,"./news_detail.html",{'post':post} )
+
+def about_page(request):
+    return render(request,"./about.html" )

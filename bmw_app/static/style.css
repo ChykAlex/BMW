@@ -105,6 +105,23 @@
     margin-bottom: 20px;
 }
 /* home */
+/* about */
+.about {
+    color: white;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+.about-description {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+/* about */
 /* last-news */
 .last_news {
     height: 100vh;
