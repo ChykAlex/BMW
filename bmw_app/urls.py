@@ -5,5 +5,4 @@ urlpatterns = [
     path('',views.home_page,name = 'home_page'),
     path('news/',views.news_page, name = 'news_page'),
     path('news/detail/<int:pk>/',views.news_detail_page, name = 'news_detail_page'),
-    path('about/<int:pk>/',views.about_page, name = 'about_page'),
 ]
